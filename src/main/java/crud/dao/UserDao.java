@@ -9,7 +9,6 @@ public interface UserDao {
 
     List<User> getAllUsers();
 
-     @Transactional
     User getUserByID(Long id);
 
     void updateUser(User user);

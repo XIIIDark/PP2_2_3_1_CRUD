@@ -3,6 +3,7 @@ package crud.service;
 import crud.dao.UserDao;
 import crud.model.User;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -26,16 +27,19 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
+    @Transactional
     public void updateUser(User user) {
         userDao.updateUser(user);
     }
 
     @Override
+    @Transactional
     public void deleteUserByID(Long id) {
         userDao.deleteUserByID(id);
     }
 
     @Override
+    @Transactional
     public void createUser(User user) {
         userDao.createUser(user);
     }

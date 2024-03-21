@@ -1,6 +1,7 @@
 package crud.service;
 
 import crud.model.User;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
